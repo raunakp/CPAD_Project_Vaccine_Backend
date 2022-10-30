@@ -2,7 +2,7 @@
 
 All request/response body in JSON format.
 
-1. Get all student details
+### Get all student details
 GET
 /students/all
 
@@ -20,7 +20,7 @@ Returns a list of all students.
     ...
 }
 
-2. Get Student details
+### Get Student details
 GET
 /student/{student_id}
 
@@ -39,12 +39,14 @@ Returns details of a given student
     ...
 }
 
-3. POST
+### Add new Student
+POST
 /student/new
 
 Add new student details
 
-4. POST
+###  Bulk add new students
+POST
 /students/buld_add
 
 Bulk add new students
