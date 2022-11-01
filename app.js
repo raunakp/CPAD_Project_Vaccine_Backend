@@ -90,7 +90,7 @@ app.get("/student/delete/:id", (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("delete", { model: row });
+    res.render("student-delete", { model: row });
   });
 });
 
