@@ -72,7 +72,7 @@ app.get("/student/edit/:id", (req, res) => {
 // POST /student/edit/5
 app.post("/student/edit/:id", (req, res) => {
   const id = req.params.id;
-  const student = [req.body.Name, req.body.Email, req.body.DoB, req.body.AadharNumber, req.body.MobileNumber, req.body.Status, req.body.VaccinationStatus, req.body.VaccineType, VaccinationWorkerId, VaccinationDate, id];
+  const student = [req.body.Name, req.body.Email, req.body.DoB, req.body.AadharNumber, req.body.MobileNumber, req.body.Status, req.body.VaccinationStatus, req.body.VaccineType, req.body.VaccinationWorkerId, req.body.VaccinationDate, id];
   const sql = "UPDATE Student SET Name = ?, Email = ?, DoB = ?, AadharNumber = ?, MobileNumber = ?, Status = ?, VaccinationStatus = ?, VaccineType = ?, VaccinationWorkerId = ?, VaccinationDate = ?  WHERE (StudentID = ?)";
   db.run(sql, student, err => {
     if (err) {
