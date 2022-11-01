@@ -9,8 +9,14 @@
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
-        <th>Mobile</th>
+        <th>DoB</th>
+        <th>AadharNumber</th>
+        <th>MobileNumber</th>
         <th>Status</th>
+        <th>VaccinationStatus</th>
+        <th>VaccineType</th>
+        <th>VaccinationWorkerId</th>
+        <th>VaccinationDate</th>
         <th class="d-print-none">
           <a class="btn btn-sm btn-success" href="student/create">Add</a>
         </th>
@@ -21,8 +27,15 @@
         <tr>
           <td><%= student.StudentID %></td>
           <td><%= student.Name %></td>
+          <td><%= student.Email %></td>
+          <td><%= student.DoB %></td>
+          <td><%= student.AadharNumber %></td>
           <td><%= student.MobileNumber %></td>
           <td><%= student.Status %></td>
+          <td><%= student.VaccinationStatus %></td>
+          <td><%= student.VaccineType %></td>
+          <td><%= student.VaccinationWorkerId %></td>
+          <td><%= student.VaccinationDate %></td>
           <td class="d-print-none">
             <a class="btn btn-sm btn-warning" href="/edit/<%= student.StudentID %>">Edit</a>
             <a class="btn btn-sm btn-danger" href="/delete/<%= student.StudentID %>">Delete</a>
