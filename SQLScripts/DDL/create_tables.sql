@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS "Student" (
     "AadharNumber" TEXT,
 	"MobileNumber" INTEGER NOT NULL UNIQUE,
 	"Status" TEXT NOT NULL DEFAULT 'ACTIVE' CHECK(Status IN ('ACTIVE','INACTIVE')),
-    "VaccinationStatus" TEXT NOT NULL DEFAULT 'DONE' CHECK(Status IN ('DONE','PENDING', 'MEDICAL_ISSUES_CANNOT_VACCINATE', 'UNKNOWN', 'SCHEDULED')),
+    "VaccinationStatus" TEXT NOT NULL DEFAULT 'DONE' CHECK(VaccinationStatus IN ('DONE','PENDING','MEDICAL_ISSUES_CANNOT_VACCINATE','UNKNOWN','SCHEDULED')),
     "VaccineType" TEXT,
     "VaccinationWorkerId" TEXT,
     "VaccinationDate" TEXT,
