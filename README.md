@@ -61,6 +61,8 @@ install npm dependencies:
   - .read ./../SQLScripts/DDL/create_tables.sql
 - Run the scripts to populate initial data
   - .read ./../SQLScripts/DML/StudentsInsertScript.sql
+  - .read ./../SQLScripts/DML/VaccinationDrivesInsertScript.sql
+  - .read ./../SQLScripts/DML/VaccinationDriveRegistrationsInsertScript.sql
 
 ## Run the project
 To run the project, simply execute the following command:

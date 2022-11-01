@@ -15,6 +15,22 @@ CREATE TABLE IF NOT EXISTS "Student" (
 	PRIMARY KEY("StudentID")
 );
 
+CREATE TABLE IF NOT EXISTS "VaccinationDrive" (
+	"VaccinationDriveID"	INTEGER NOT NULL UNIQUE,
+	"Date"	TEXT NOT NULL,
+	"CoordinatorName"	TEXT NOT NULL UNIQUE,
+    "CoordinatorID" TEXT NOT NULL,
+	"CoordinatorMobileNumber" INTEGER NOT NULL UNIQUE,
+    "Capacity" INTEGER,
+	"Status" TEXT NOT NULL DEFAULT 'PLANNED' CHECK(Status IN ('PLANNED','CANCELLED','POSTPONED','DONE')),
+	PRIMARY KEY("VaccinationDriveID")
+);
+
+CREATE TABLE IF NOT EXISTS "VaccinationDriveRegistrations" (
+    "VaccinationDriveID" INTEGER NOT NULL,
+    "StudentID"	INTEGER NOT NULL
+);
+
 -- INDEXES
 
 CREATE INDEX "StudentIndexes" ON "Student" (
