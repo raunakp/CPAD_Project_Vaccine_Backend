@@ -37,8 +37,8 @@
           <td><%= student.VaccinationWorkerId %></td>
           <td><%= student.VaccinationDate %></td>
           <td class="d-print-none">
-            <a class="btn btn-sm btn-warning" href="/edit/<%= student.StudentID %>">Edit</a>
-            <a class="btn btn-sm btn-danger" href="/delete/<%= student.StudentID %>">Delete</a>
+            <a class="btn btn-sm btn-warning" href="student/edit/<%= student.StudentID %>">Edit</a>
+            <a class="btn btn-sm btn-danger" href="student/delete/<%= student.StudentID %>">Delete</a>
           </td>
         </tr>
       <% } %>

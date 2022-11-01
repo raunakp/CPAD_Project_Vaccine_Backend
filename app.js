@@ -39,13 +39,13 @@ app.get("/students", (req, res) => {
   });
 });
 
-// GET /students/create
-app.get("/students/create", (req, res) => {
+// GET /student/create
+app.get("/student/create", (req, res) => {
   res.render("student-create", { model: {} });
 });
 
-// POST /students/create
-app.post("/students/create", (req, res) => {
+// POST /student/create
+app.post("/student/create", (req, res) => {
   console.log(req)
   const sql = "INSERT INTO Student (Name, Email, DoB, AadharNumber, MobileNumber, Status, VaccinationStatus, VaccineType, VaccinationWorkerId, VaccinationDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
   const student = [req.body.Name, req.body.Email, req.body.DoB, req.body.AadharNumber, req.body.MobileNumber, req.body.Status, req.body.VaccinationStatus, req.body.VaccineType, req.body.VaccinationWorkerId, req.body.VaccinationDate];
@@ -57,8 +57,8 @@ app.post("/students/create", (req, res) => {
   });
 });
 
-// GET /students/edit/5
-app.get("/students/edit/:id", (req, res) => {
+// GET /student/edit/5
+app.get("/student/edit/:id", (req, res) => {
   const id = req.params.id;
   const sql = "SELECT * FROM Student WHERE StudentID = ?";
   db.get(sql, id, (err, row) => {
@@ -69,8 +69,8 @@ app.get("/students/edit/:id", (req, res) => {
   });
 });
 
-// POST /students/edit/5
-app.post("/students/edit/:id", (req, res) => {
+// POST /student/edit/5
+app.post("/student/edit/:id", (req, res) => {
   const id = req.params.id;
   const student = [req.body.Name, req.body.Email, req.body.DoB, req.body.AadharNumber, req.body.MobileNumber, req.body.Status, req.body.VaccinationStatus, req.body.VaccineType, VaccinationWorkerId, VaccinationDate, id];
   const sql = "UPDATE Student SET Name = ?, Email = ?, DoB = ?, AadharNumber = ?, MobileNumber = ?, Status = ?, VaccinationStatus = ?, VaccineType = ?, VaccinationWorkerId = ?, VaccinationDate = ?  WHERE (StudentID = ?)";
@@ -83,7 +83,7 @@ app.post("/students/edit/:id", (req, res) => {
 });
 
 // GET /students/delete/5
-app.get("/students/delete/:id", (req, res) => {
+app.get("/student/delete/:id", (req, res) => {
   const id = req.params.id;
   const sql = "SELECT * FROM Student WHERE StudentID = ?";
   db.get(sql, id, (err, row) => {
@@ -94,8 +94,8 @@ app.get("/students/delete/:id", (req, res) => {
   });
 });
 
-// POST students/delete/5
-app.post("/students/delete/:id", (req, res) => {
+// POST student/delete/5
+app.post("/student/delete/:id", (req, res) => {
   const id = req.params.id;
   const sql = "DELETE FROM Student WHERE StudentID = ?";
   db.run(sql, id, err => {
