@@ -21,6 +21,5 @@ INSERT INTO "Student" ("StudentID", "Name",             "Email",                
  (						19,			'Arthur West',		'a.west@primaryschool.com',				  '01-01-2013',   "8608 9837 4844",   "9685900342",   'ACTIVE',       'MEDICAL_ISSUES_CANNOT_VACCINATE',   NULL,                              NULL,                   NULL),
  (						88,			'Anna Russell',		'a.russell@edumail.com', 				  '11-09-2013',	  "4302 5229 1682",	  "8481462561",   'ACTIVE',       'UNKNOWN',						   NULL,                              NULL,                   NULL),
  (						50,			'Jacob West',		'j.west@govhighschool',					  '01-10-2015',	  "1399 4668 3867",	  "8573969685",   'ACTIVE',		  'DONE',                              "Covaxin",                        "111",					"01-04-2021"),
- (						61,			'Jacob Elliott',    'j.elliott@edumail.com',                  '09-01-2015',   "8399 4668 7767",   "9378748082",   'ACTIVE',		  'DONE',                              "Covaxin",                        "215",					"18-12-2021")
-);
-COMMIT;
+ (						61,			'Jacob Elliott',    'j.elliott@edumail.com',                  '09-01-2015',   "8399 4668 7767",   "9378748082",   'ACTIVE',		  'DONE',                              "Covaxin",                        "215",					"18-12-2021");
+ COMMIT;
