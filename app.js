@@ -2,7 +2,6 @@ const path = require("path");
 const express = require("express");
 const bodyParser = require('body-parser')
 const app = express();
-const db = require('./db').db
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -21,7 +20,6 @@ app.post('/api/student', studentAPI.createStudent)
 app.put('/api/student/:id', studentAPI.updateStudent)
 app.delete('/api/student/:id', studentAPI.deleteStudent)
 
-
 const studentWeb = require('./web/student')
 app.get('/students', studentWeb.getStudents)
 app.get('/student/create', studentWeb.createStudentForm)
@@ -30,6 +28,13 @@ app.get("/student/edit/:id", studentWeb.editStudentForm)
 app.post("/student/edit/:id", studentWeb.updateStudent)
 app.get("/student/delete/:id", studentWeb.deleteStudentForm);
 app.post("/student/delete/:id", studentWeb.deleteStudent)
+
+const vaccinationDrivesAPI = require('./api/vaccinationDrives')
+app.get('/api/vaccinationDrives', vaccinationDrivesAPI.getVaccinationDrives)
+app.get('/api/vaccinationDrive/:id', vaccinationDrivesAPI.getVaccinationDriveById)
+app.post('/api/vaccinationDrive', vaccinationDrivesAPI.createVaccinationDrive)
+app.put('/api/vaccinationDrive/:id', vaccinationDrivesAPI.updateVaccinationDrive)
+app.delete('/api/vaccinationDrive/:id', vaccinationDrivesAPI.deleteVaccinationDrive)
 
 
 app.get("/", (req, res) => {

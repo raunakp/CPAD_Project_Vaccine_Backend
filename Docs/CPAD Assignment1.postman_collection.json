@@ -7,148 +7,302 @@
 	},
 	"item": [
 		{
-			"name": "Get Student With ID",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"accept": true
-				}
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "http://localhost:3090/api/student/11",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3090",
-					"path": [
-						"api",
-						"student",
-						"11"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create New Student",
-			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"accept": true
-				}
-			},
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"Name\": \"Ram Kumar\",\n    \"Email\": \"ram.kumar@govhighschool.nic.in\",\n    \"DoB\": \"04-03-1991\",\n    \"AadharNumber\": \"3456 7890 2444\",\n    \"MobileNumber\": 7745600987,\n    \"Status\": \"ACTIVE\",\n    \"VaccinationStatus\": \"DONE\",\n    \"VaccineType\": \"Covidshield\",\n    \"VaccinationWorkerId\": \"224\",\n    \"VaccinationDate\": \"31-03-2021\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Student",
+			"item": [
+				{
+					"name": "Get Student With ID",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
 						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3090/api/student/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3090",
-					"path": [
-						"api",
-						"student",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get All Students",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3090/api/students",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3090",
-					"path": [
-						"api",
-						"students"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Student With ID",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:3090/api/student/13",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3090",
-					"path": [
-						"api",
-						"student",
-						"13"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Update Student With ID",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n        \"xStudentID\": 11,\n        \"Name\": \"Ram Kumar\",\n        \"Email\": \"ram.kumar@govhighschool.nic.in\",\n        \"DoB\": \"04-03-1991\",\n        \"AadharNumber\": \"3456 7890 2444\",\n        \"MobileNumber\": 6745600987,\n        \"Status\": \"ACTIVE\",\n        \"VaccinationStatus\": \"DONE\",\n        \"VaccineType\": \"xCovidshield\",\n        \"VaccinationWorkerId\": \"224\",\n        \"VaccinationDate\": \"31-03-2021\"\n    }",
-					"options": {
-						"raw": {
-							"language": "json"
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3090/api/student/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"student",
+								"11"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3090/api/student/11",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3090",
-					"path": [
-						"api",
-						"student",
-						"11"
-					]
+				{
+					"name": "Create New Student",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Ram Kumar\",\n    \"Email\": \"ram.kumar@govhighschool.nic.in\",\n    \"DoB\": \"04-03-1991\",\n    \"AadharNumber\": \"3456 7890 2444\",\n    \"MobileNumber\": 7745600987,\n    \"Status\": \"ACTIVE\",\n    \"VaccinationStatus\": \"DONE\",\n    \"VaccineType\": \"Covidshield\",\n    \"VaccinationWorkerId\": \"224\",\n    \"VaccinationDate\": \"31-03-2021\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3090/api/student/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"student",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student With ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/student/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"student",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student With ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"xStudentID\": 11,\n        \"Name\": \"Ram Kumar\",\n        \"Email\": \"ram.kumar@govhighschool.nic.in\",\n        \"DoB\": \"04-03-1991\",\n        \"AadharNumber\": \"3456 7890 2444\",\n        \"MobileNumber\": 6745600987,\n        \"Status\": \"ACTIVE\",\n        \"VaccinationStatus\": \"DONE\",\n        \"VaccineType\": \"xCovidshield\",\n        \"VaccinationWorkerId\": \"224\",\n        \"VaccinationDate\": \"31-03-2021\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3090/api/student/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"student",
+								"11"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "VaccinationDrive",
+			"item": [
+				{
+					"name": "Get All VaccinationDrives",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDrives",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDrives"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get VaccinationDrive With ID",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3090/api/student/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"student",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New VaccinationDrive",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"VaccinationDriveID\": 4,\n    \"Date\": \"31-11-2022\",\n    \"CoordinatorName\": \"Vidysagar M\",\n    \"CoordinatorID\": \"224\",\n    \"CoordinatorMobileNumber\": 9090706677,\n    \"Capacity\": 250,\n    \"Status\": \"PLANNED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3090/api/VaccinationDrive/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"VaccinationDrive",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update VaccinationDrive With ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"xVaccinationDriveID\": 4,\n    \"Date\": \"31-11-2022\",\n    \"CoordinatorName\": \"xBhopal Gangaram\",\n    \"CoordinatorID\": \"224\",\n    \"CoordinatorMobileNumber\": 8090706677,\n    \"Capacity\": 50,\n    \"Status\": \"PLANNED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDrive/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDrive",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete VaccinationDrive With ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDrive/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDrive",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
