@@ -29,12 +29,19 @@ app.post("/student/edit/:id", studentWeb.updateStudent)
 app.get("/student/delete/:id", studentWeb.deleteStudentForm);
 app.post("/student/delete/:id", studentWeb.deleteStudent)
 
-const vaccinationDrivesAPI = require('./api/vaccinationDrives')
-app.get('/api/vaccinationDrives', vaccinationDrivesAPI.getVaccinationDrives)
-app.get('/api/vaccinationDrive/:id', vaccinationDrivesAPI.getVaccinationDriveById)
-app.post('/api/vaccinationDrive', vaccinationDrivesAPI.createVaccinationDrive)
-app.put('/api/vaccinationDrive/:id', vaccinationDrivesAPI.updateVaccinationDrive)
-app.delete('/api/vaccinationDrive/:id', vaccinationDrivesAPI.deleteVaccinationDrive)
+const vaccinationDriveAPI = require('./api/vaccinationDrive')
+app.get('/api/vaccinationDrives', vaccinationDriveAPI.getVaccinationDrives)
+app.get('/api/vaccinationDrive/:id', vaccinationDriveAPI.getVaccinationDriveById)
+app.post('/api/vaccinationDrive', vaccinationDriveAPI.createVaccinationDrive)
+app.put('/api/vaccinationDrive/:id', vaccinationDriveAPI.updateVaccinationDrive)
+app.delete('/api/vaccinationDrive/:id', vaccinationDriveAPI.deleteVaccinationDrive)
+
+const vaccinationDriveRegistrationsAPI = require('./api/vaccinationDriveRegistration')
+app.get('/api/vaccinationDriveRegistrations', vaccinationDriveRegistrationsAPI.getVaccinationDriveRegistrations)
+app.get('/api/vaccinationDriveRegistration/studentsRegisteredFor/:id', vaccinationDriveRegistrationsAPI.studentsRegisteredForByID)
+app.get('/api/vaccinationDriveRegistration/drivesRegisteredForStudent/:id', vaccinationDriveRegistrationsAPI.drivesRegisteredForStudentByID)
+app.post('/api/vaccinationDriveRegistration', vaccinationDriveRegistrationsAPI.createVaccinationDriveRegistration)
+app.delete('/api/vaccinationDriveRegistrations/:vaccinationDriveID/:studentID', vaccinationDriveRegistrationsAPI.deleteVaccinationDrive)
 
 
 app.get("/", (req, res) => {

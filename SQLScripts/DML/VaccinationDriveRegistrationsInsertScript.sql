@@ -1,8 +1,8 @@
 BEGIN TRANSACTION;
 
-DELETE FROM "VaccinationDriveRegistrations";
+DELETE FROM "VaccinationDriveRegistration";
 
-INSERT INTO "VaccinationDriveRegistrations" ("VaccinationDriveID", "StudentID") VALUES
+INSERT INTO "VaccinationDriveRegistration" ("VaccinationDriveID", "StudentID") VALUES
  (11, 13),
  (11, 27),
  (21, 11),

@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS "VaccinationDrive" (
 	PRIMARY KEY("VaccinationDriveID")
 );
 
-CREATE TABLE IF NOT EXISTS "VaccinationDriveRegistrations" (
+CREATE TABLE IF NOT EXISTS "VaccinationDriveRegistration" (
     "VaccinationDriveID" INTEGER NOT NULL,
     "StudentID"	INTEGER NOT NULL
 );

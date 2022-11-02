@@ -303,6 +303,134 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "VaccinationDriveRegistration",
+			"item": [
+				{
+					"name": "Get All vaccinationDriveRegistrations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDriveRegistrations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDriveRegistrations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get studentsRegisteredForByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDriveRegistrations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDriveRegistrations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get drivesRegisteredForStudent/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDriveRegistration/drivesRegisteredForStudent/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDriveRegistration",
+								"drivesRegisteredForStudent",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New vaccinationDriveRegistration",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"VaccinationDriveID\": 123,\n    \"StudentID\": 321\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3090/api/vaccinationDriveRegistration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"vaccinationDriveRegistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete vaccinationDriveRegistration",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3090/api/student/13",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3090",
+							"path": [
+								"api",
+								"student",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
