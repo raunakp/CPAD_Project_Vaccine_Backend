@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "e09d364e-7afd-450a-9b82-95604a4f422a",
+		"name": "CPAS Ass1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "454"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3090/api/student/11",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3090/api/student/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3090",
+					"path": [
+						"api",
+						"student",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3090/api/student",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Name\": \"Ram Kumar\",\n    \"Email\": \"ram.kumar@govhighschool.nic.in\",\n    \"DoB\": \"04-03-1991\",\n    \"AadharNumber\": \"3456 7890 2444\",\n    \"MobileNumber\": 7745600987,\n    \"Status\": \"ACTIVE\",\n    \"VaccinationStatus\": \"DONE\",\n    \"VaccineType\": \"Covidshield\",\n    \"VaccinationWorkerId\": \"224\",\n    \"VaccinationDate\": \"31-03-2021\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3090/api/student/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3090",
+					"path": [
+						"api",
+						"student",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3090/api/students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3090/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3090",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
