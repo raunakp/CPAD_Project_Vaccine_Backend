@@ -35,7 +35,12 @@ app.get("/students", (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("students", { model: rows });
+    var accept = req.headers['accept'];
+    if (accept.includes("json")) {
+      res.send(rows)
+    } else {
+      res.render("students", { model: rows });
+    }
   });
 });
 
