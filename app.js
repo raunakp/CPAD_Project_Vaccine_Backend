@@ -1,25 +1,25 @@
-const express = require("express");
 const path = require("path");
+const express = require("express");
+const bodyParser = require('body-parser')
 const app = express();
-const fs = require('fs');
-const sqlite3 = require("sqlite3").verbose();
+const db = require('./db').db
+const studentAPI = require('./app/student')
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
-
-const db_name = path.join(__dirname, "data", "vaccinedb.sqlite3");
-const db = new sqlite3.Database(db_name, err => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log("Successful connection to the database 'vaccinedb.sqlite3'");
-});
+app.use(bodyParser.json())
 
 app.listen(3090, () => {
   console.log("Server started (http://localhost:3090/) !");
 });
+
+app.get('/api/students', studentAPI.getStudents)
+app.get('/api/student/:id', studentAPI.getStudentById)
+app.post('/api/student', studentAPI.createStudent)
+app.put('/api/student/:id', studentAPI.updateStudent)
+app.delete('/api/student/:id', studentAPI.updateStudent)
 
 app.get("/", (req, res) => {
   res.render("index");
