@@ -1,13 +1,13 @@
 {
 	"info": {
 		"_postman_id": "e09d364e-7afd-450a-9b82-95604a4f422a",
-		"name": "CPAS Ass1",
+		"name": "CPAD Assignment1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "454"
 	},
 	"item": [
 		{
-			"name": "http://localhost:3090/api/student/11",
+			"name": "Get Student With ID",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true
@@ -39,7 +39,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3090/api/student",
+			"name": "Create New Student",
 			"protocolProfileBehavior": {
 				"disabledSystemHeaders": {
 					"accept": true
@@ -80,7 +80,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3090/api/students",
+			"name": "Get All Students",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -94,6 +94,57 @@
 					"path": [
 						"api",
 						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Student With ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3090/api/student/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3090",
+					"path": [
+						"api",
+						"student",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student With ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"xStudentID\": 11,\n        \"Name\": \"Ram Kumar\",\n        \"Email\": \"ram.kumar@govhighschool.nic.in\",\n        \"DoB\": \"04-03-1991\",\n        \"AadharNumber\": \"3456 7890 2444\",\n        \"MobileNumber\": 6745600987,\n        \"Status\": \"ACTIVE\",\n        \"VaccinationStatus\": \"DONE\",\n        \"VaccineType\": \"xCovidshield\",\n        \"VaccinationWorkerId\": \"224\",\n        \"VaccinationDate\": \"31-03-2021\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3090/api/student/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3090",
+					"path": [
+						"api",
+						"student",
+						"11"
 					]
 				}
 			},

@@ -19,7 +19,7 @@ app.get('/api/students', studentAPI.getStudents)
 app.get('/api/student/:id', studentAPI.getStudentById)
 app.post('/api/student', studentAPI.createStudent)
 app.put('/api/student/:id', studentAPI.updateStudent)
-app.delete('/api/student/:id', studentAPI.updateStudent)
+app.delete('/api/student/:id', studentAPI.deleteStudent)
 
 app.get("/", (req, res) => {
   res.render("index");
