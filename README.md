@@ -73,5 +73,5 @@ Note that the project is configured to run the App on port 3090. To change the p
 app.listen(3090...) to any other port of your choice.
 
 ## API Documentation
-- [Import this [Postman collection](./Docs/CPAD%20Assignment1.postman_collection.json) to test the APIs locally.
+- Import this [Postman collection](./Docs/CPAD%20Assignment1.postman_collection.json) to test the APIs locally.
 - [Documentation available here](https://documenter.getpostman.com/view/454/2s8YRqjpu4)
