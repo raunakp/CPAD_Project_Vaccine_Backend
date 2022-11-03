@@ -416,7 +416,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3090/api/student/13",
+							"raw": "http://localhost:3090/api/vaccinationDriveRegistrations/123/321",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -424,14 +424,19 @@
 							"port": "3090",
 							"path": [
 								"api",
-								"student",
-								"13"
+								"vaccinationDriveRegistrations",
+								"123",
+								"321"
 							]
 						}
 					},
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Reports",
+			"item": []
 		}
 	]
 }
