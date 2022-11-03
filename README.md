@@ -71,3 +71,7 @@ To run the project, simply execute the following command:
 This command instructs node to begin executing the file index.js - the entry-point to our Application. Once the execution starts, open [http://localhost:3090](http://localhost:3090) on your browser to see the demo.
 Note that the project is configured to run the App on port 3090. To change the port number simply modify the line:
 app.listen(3090...) to any other port of your choice.
+
+## API Documentation
+- [Import this [Postman collection](./Docs/CPAD%20Assignment1.postman_collection.json) to test the APIs locally.
+- [Documentation available here](https://documenter.getpostman.com/view/454/2s8YRqjpu4)
