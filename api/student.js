@@ -1,8 +1,72 @@
 
 const db = require('./../db').db
 
+exports.getStudentCounts = (request, response) => {
+  const sql = "SELECT * FROM Student"
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error(error.message);
+      response.status(500).send(error.message)
+    } else {
+      var vaccinated = 0
+      var unvaccinated = 0
+      var notEligible = 0
+      var all = 0
+      // var scheduled = 0
+      // var not eleigible
+
+      all = rows.length
+      for (let i = 0; i < all; i++) {
+        var student = rows[i]
+        const VaccinationStatus = student.VaccinationStatus
+        if (VaccinationStatus == 'DONE') {
+          vaccinated += 1
+        } else {
+          unvaccinated += 1
+          if (VaccinationStatus == 'MEDICAL_ISSUES_CANNOT_VACCINATE') {
+            notEligible += 1
+          }
+        }
+      }
+
+      response.status(200).json({
+        'vaccinated': vaccinated,
+        'unvaccinated': unvaccinated,
+        'notEligible': notEligible,
+        'all': all,
+        'x-comment-ignore': 'notEligible is unvaccinated'
+      })
+    }
+  })
+}
+
+
 exports.getStudents = (request, response) => {
   const sql = "SELECT * FROM Student"
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error(error.message);
+      response.status(500).send(error.message)
+    } else {
+      response.status(200).json(rows)
+    }
+  })
+}
+
+exports.getVaccinatedStudents = (request, response) => {
+  const sql = "select * from Student WHERE VaccinationStatus = 'DONE'"
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error(error.message);
+      response.status(500).send(error.message)
+    } else {
+      response.status(200).json(rows)
+    }
+  })
+}
+
+exports.getUnVaccinatedStudents = (request, response) => {
+  const sql = "select * from Student WHERE VaccinationStatus <> 'DONE'"
   db.all(sql, [], (err, rows) => {
     if (err) {
       console.error(error.message);
@@ -59,14 +123,14 @@ exports.updateStudent = (request, response) => {
 }
 
 exports.deleteStudent = (request, response) => {
-    const id = parseInt(request.params.id)
+  const id = parseInt(request.params.id)
 
-    db.run('DELETE FROM Student WHERE StudentID = $1', [id], (error, results) => {
-      if (error) {
-        console.error(error.message);
-        response.status(500).send(error.message)
-      } else {
-        response.status(200).send(`Student deleted with ID: ${id}`)
-      }
-    })
+  db.run('DELETE FROM Student WHERE StudentID = $1', [id], (error, results) => {
+    if (error) {
+      console.error(error.message);
+      response.status(500).send(error.message)
+    } else {
+      response.status(200).send(`Student deleted with ID: ${id}`)
+    }
+  })
 }

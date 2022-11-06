@@ -15,6 +15,9 @@ app.listen(3090, () => {
 
 const studentAPI = require('./api/student')
 app.get('/api/students', studentAPI.getStudents)
+app.get('/api/student/counts', studentAPI.getStudentCounts)
+app.get('/api/students/vaccinated', studentAPI.getVaccinatedStudents)
+app.get('/api/students/unvaccinated', studentAPI.getUnVaccinatedStudents)
 app.get('/api/student/:id', studentAPI.getStudentById)
 app.post('/api/student', studentAPI.createStudent)
 app.put('/api/student/:id', studentAPI.updateStudent)
