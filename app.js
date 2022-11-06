@@ -13,6 +13,9 @@ app.listen(3090, () => {
   console.log("Server started (http://localhost:3090/) !");
 });
 
+const reportsAPI = require('./api/reports')
+app.get('/api/reports', reportsAPI.reports)
+
 const studentAPI = require('./api/student')
 app.get('/api/students', studentAPI.getStudents)
 app.get('/api/student/counts', studentAPI.getStudentCounts)
