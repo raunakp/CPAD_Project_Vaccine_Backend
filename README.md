@@ -6,6 +6,8 @@ CROSS-PLATFORM APPLICATION DEVELOPMENT | SEZG585/SSZG585\
 
 Project name: SCHOOL VACCINATION TRACKER
 
+Frontend project link: https://github.com/raunakp/CPAD_Project1_Frontend
+
 ## Members
 
 | Name | email |
@@ -20,7 +22,7 @@ Project name: SCHOOL VACCINATION TRACKER
 | ----------- | ----------- | ----------- | ----------- |
 | Backed, hosting APIs |<https://nodejs.org/en/>|Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.| Some Geek had the idea of harnessing the power of JS community beyond the browser |
 | Database | <https://www.sqlite.org/index.html> | SQLite is a C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine. SQLite is the most used database engine in the world. SQLite is built into all mobile phones and most computers and comes bundled inside countless other applications that people use every day. | - |
-| Cross platform Frontend | <https://reactnative.dev/> | Create native apps for Android and iOS using React | React Native combines the best parts of native development with React, a
+| Cross platform Frontend | <https://reactnative.dev/> | Create native apps for Android and iOS using React | React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.
 
 
 [SQL Scripts](./SQLScripts)
