@@ -13,6 +13,59 @@ exports.getVaccinationDrives = (request, response) => {
   })
 }
 
+exports.getPastVaccinationDrives = (request, response) => {
+  const sql = "SELECT * FROM VaccinationDrive"
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error(error.message);
+      response.status(500).send(error.message)
+    } else {
+      var pastDrives = []
+      var upcomingDrives = []
+
+      for (i = 0; i < rows.length; i++) {
+        let drive = rows[i]
+        let date1 = drive.Date
+        let dateObj = new Date(date1)
+        let dateNow = new Date()
+        if (dateObj >= dateNow) {
+          upcomingDrives.push(drive)
+        } else {
+          pastDrives.push(drive)
+        }
+      }
+      response.status(200).json(pastDrives)
+    }
+  })
+}
+
+exports.getUpcomingVaccinationDrives = (request, response) => {
+  const sql = "SELECT * FROM VaccinationDrive"
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error(error.message);
+      response.status(500).send(error.message)
+    } else {
+      var pastDrives = []
+      var upcomingDrives = []
+
+      for (i = 0; i < rows.length; i++) {
+        let drive = rows[i]
+        let date1 = drive.Date
+        let dateObj = new Date(date1)
+        let dateNow = new Date()
+        if (dateObj >= dateNow) {
+          upcomingDrives.push(drive)
+        } else {
+          pastDrives.push(drive)
+        }
+      }
+      response.status(200).json(upcomingDrives)
+    }
+  })
+}
+
+
 exports.getVaccinationDriveById = (request, response) => {
   const id = parseInt(request.params.id)
   const sql = "SELECT * FROM VaccinationDrive where VaccinationDriveID = $1"

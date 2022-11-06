@@ -37,10 +37,13 @@ app.post("/student/delete/:id", studentWeb.deleteStudent)
 
 const vaccinationDriveAPI = require('./api/vaccinationDrive')
 app.get('/api/vaccinationDrives', vaccinationDriveAPI.getVaccinationDrives)
+app.get('/api/vaccinationDrives/past', vaccinationDriveAPI.getPastVaccinationDrives)
+app.get('/api/vaccinationDrives/upcoming', vaccinationDriveAPI.getUpcomingVaccinationDrives)
 app.get('/api/vaccinationDrive/:id', vaccinationDriveAPI.getVaccinationDriveById)
 app.post('/api/vaccinationDrive', vaccinationDriveAPI.createVaccinationDrive)
 app.put('/api/vaccinationDrive/:id', vaccinationDriveAPI.updateVaccinationDrive)
 app.delete('/api/vaccinationDrive/:id', vaccinationDriveAPI.deleteVaccinationDrive)
+
 
 const vaccinationDriveRegistrationsAPI = require('./api/vaccinationDriveRegistration')
 app.get('/api/vaccinationDriveRegistrations', vaccinationDriveRegistrationsAPI.getVaccinationDriveRegistrations)
